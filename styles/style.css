@@ -2,4 +2,135 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+color: var(--text-color);
+font-family: var(--main-font);
+background-color: var(--background-color);
+background-image: url(../images/cover-image-dark.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
 }
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  align-items: center;
+  min-height: max(668px, 100vb);
+  padding: 10px;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  border-inline-end: 1px solid var(--decoration-color, #ff0070);
+  border-block-start: 1px solid var(--decoration-color, #ff0070);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  border-inline-end: 1px solid var(--decoration-color, #ff0070);
+  border-block-start: 1px solid var(--decoration-color, #ff0070);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
+
+.decoration {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decoration::before {
+  position: absolute;
+  content: 'rec';
+  text-transform: uppercase;
+  color: var(--decoration-color);
+  font-weight: 400;
+  font-size: 18px;
+  inset-inline-end: 38px;
+  inset-block-start: 10px;
+}
+
+.decoration::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--decoration-color);
+  background-color: var(--decoration-color);
+  inset-inline-end: 19px;
+  inline-size: 9px;
+  inset-block-start: 18px;
+  block-size: 9px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: var(--buttom-color);
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--buttom-hover-color);
+  outline-offset: 1px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+  pointer-events: none;
+}
+
+.header__title {
+  color: var(--main-title-text-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--main-title-accent-text-color);
+}
+
+.header__text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.title-decoration {
+  color: var(--subtitle-text-color);
+  background-color: var(--background-color);
+}
+
