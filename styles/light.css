@@ -21,6 +21,7 @@
   --buttom-color: #353430;
   --buttom-hover-color: #32312d66;
   --link-accent-color: #ff8dcb;
+  background-image: url(../images/cover-image-light.png);
 }
 
 .theme_light .decoration {
