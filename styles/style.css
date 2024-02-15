@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 color: var(--text-color);
-font-family: var(--main-font);
+font-family: var(--main-font), Arial, Helvetica, sans-serif;
 background-color: var(--background-color);
 background-image: url(../images/cover-image-dark.png);
 background-position: center;
